@@ -6,8 +6,8 @@ const Country = ({ country, weather }) => {
   return (
     <div style={{ maxWidth: '90%' }}>
       <h2>{country.name.common}</h2>
-      <div>capital {country.capital}</div>
-      <div>area {country.area}</div>
+      <div>Capital: {country.capital}</div>
+      <div>Area: {country.area}</div>
 
       <h3>languages:</h3>
       <ul>
