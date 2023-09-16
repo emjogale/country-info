@@ -1,22 +1,22 @@
-import React from "react";
+import React from 'react';
 
 const Countries = ({ filteredList, handleClick }) => {
-	if (filteredList.length <= 10) {
-		return (
-			<div>
-				{filteredList.map((country) => (
-					<div key={country.name.common}>
-						{country.name.common}
-						<button value={country.name.common} onClick={handleClick}>
-							show
-						</button>
-					</div>
-				))}
-			</div>
-		);
-	} else {
-		return <div>Too many matches, specify another filter</div>;
-	}
+  if (filteredList.length <= 10) {
+    return (
+      <div>
+        {filteredList.map((country) => (
+          <div key={country.name.common} style={{ marginTop: '2rem' }}>
+            {country.name.common}
+            <button value={country.name.common} onClick={handleClick}>
+              show
+            </button>
+          </div>
+        ))}
+      </div>
+    );
+  } else {
+    return <div>Too many matches, specify another filter</div>;
+  }
 };
 export default Countries;
 

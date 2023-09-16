@@ -5,7 +5,7 @@ import Countries from './components/Countries';
 import Country from './components/Country';
 
 const App = () => {
-  const [filter, setFilter] = useState('');
+  const [filter, setFilter] = useState('uni');
   const [countries, setCountries] = useState([]);
   const [weather, setWeather] = useState({});
 
@@ -48,7 +48,7 @@ const App = () => {
   }, [countries, filter]);
 
   return (
-    <div>
+    <div style={{ margin: '2rem' }}>
       <h2>Which country would you like to find out about?</h2>
       <Filter onChange={handleFilterChange} filter={filter} />
       {filteredList.length !== 1 ? (
